@@ -1,0 +1,14 @@
+{
+  "name": "backend-tms",
+  "version": "1.0.0",
+  "description": "Backend server for training management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dawood israr Abrar Asghar Alee jonn tauqeer baba",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
