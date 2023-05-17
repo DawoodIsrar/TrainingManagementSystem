@@ -26,6 +26,11 @@ const routes = [
         name:"Logout",
         icon:<BsFillArrowLeftSquareFill/>
     },
+    {
+        path:'/Quiz',
+        name:"Quiz",
+        icon:<BsFillArrowLeftSquareFill/>
+    },
 ]
 function Sidebar({children}) {
     const [isOpen,setIsopen] = useState(false)
@@ -61,4 +66,4 @@ function Sidebar({children}) {
   )
 }
 
-export default Sidebar
+export default Sidebar;

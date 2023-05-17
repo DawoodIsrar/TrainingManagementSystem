@@ -8,6 +8,8 @@ import AccountSetting from "./components/pages/AccountSetting";
 import Sidebar from "./components/sidebar/Sidebar";
 import Logout from "./components/pages/Logout";
 import CourseDetail from "./components/pages/CourseDetail";
+import Quiz from "./components/pages/Quiz";
+
 function App() {
   return (
     <>
@@ -21,6 +23,8 @@ function App() {
             <Route path="/accountsetting" element={<AccountSetting />}></Route>
             <Route path="/*" element={<div>Not Found</div>}></Route>
             <Route path="/logout" element={<Logout />}></Route>
+            <Route path="/Quiz" element={<Quiz />}></Route>
+            
           </Routes>
         </Sidebar>
       </Router>
