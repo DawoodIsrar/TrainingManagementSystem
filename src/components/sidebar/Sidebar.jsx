@@ -19,6 +19,11 @@ const routes = [
         icon:<FaRegListAlt/>
     },
     {
+        path:'/CourseCreate',
+        name:"Create Course",
+        icon:<BsGearFill/>
+    },
+    {
         path:'/accountsetting',
         name:"Account setting",
         icon:<BsGearFill/>

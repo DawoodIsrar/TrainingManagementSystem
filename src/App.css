@@ -69,3 +69,51 @@ border-radius: 10px;
   text-align: center;
   width: 100%;
 }
+
+/* creATE COURSE CSS */
+.square {
+  border-radius: 0px;
+}
+
+.jumbotron {
+  background-image: linear-gradient(to right, #007bff, #000);
+  color: #fff;
+  height: 100px;
+  padding-top: 30px;
+}
+
+main{
+  width: 100%;
+}
+
+.jumbotron {
+    background-image: linear-gradient(to right, #007bff, #000);
+    color: #fff;
+  }
+  button{
+    cursor: pointer;
+  }
+  .button:hover {
+    background-color: black;
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+  
+  .ant-card-meta-title {
+    font-size: 12px;
+  }
+  
+  .markdown-preview img {
+    max-width: 300px;
+  }
+  
+  .left-bottom-radius {
+    border-radius: 0px 0px 10px 10px;
+  }
+  .createbtn{
+    width: 100%;
+    color: white;
+    background-color: #007bff;
+  }
