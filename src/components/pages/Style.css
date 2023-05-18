@@ -54,4 +54,88 @@
   .answer-section button:last-child {
     margin-bottom: 0;
   }
+
+
+
+  /* --------SignUp--------- */
+
   
+  
+.reg{
+  box-sizing: border-box;
+  border: 0px solid black;
+  box-shadow: 5px ;
+  border-radius:2px ;
+  margin: 50px 400px;
+  display: flex;
+  justify-content: center;
+ 
+  
+}
+.regform{
+  box-sizing: border-box;
+  background-color: #b9ceee;
+  height:500px;
+  margin:0 auto;
+  box-shadow:4px 4px 4px 4px rgb(172, 165, 165);
+  border:none;
+  border-radius: 5px 0px 0px 5px;  
+  align-items: center;
+  padding: 10px auto;
+  
+ 
+
+}
+.inputform{
+  height:35px;
+  margin: 10px 70px  ;
+  width: 70%;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+}
+.form-btn{
+  height:35px;
+  margin-top: 10px;
+  margin-inline: 130px;
+  width: 40%;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  background-color: rgb(73, 73, 214);;
+
+}
+
+.fields{
+padding-top: 70px;
+
+
+}
+.half{
+  width: 50%;
+  background: rgb(73, 73, 214);
+  border-radius: 0px 5px 5px 0px;  
+  box-shadow:4px 4px 4px 4px rgb(172, 165, 165);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.half-card h2{
+  color: white;
+  font-size: 70px;
+  font-family: cursive;
+  text-align: center;
+}
+.half-card h4{
+  color: white;
+    font-size: 30px;
+    font-family: cursive;
+    text-align: center;
+}
+.form{
+  width: 50%;
+  margin:0 auto;
+  
+   
+}

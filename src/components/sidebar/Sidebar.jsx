@@ -31,6 +31,11 @@ const routes = [
         name:"Quiz",
         icon:<BsFillArrowLeftSquareFill/>
     },
+    {
+        path:'Signup',
+        name:"signup",
+        icon:<BsFillArrowLeftSquareFill/>
+    }
 ]
 function Sidebar({children}) {
     const [isOpen,setIsopen] = useState(false)
