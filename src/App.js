@@ -10,6 +10,7 @@ import Logout from "./components/pages/Logout";
 import CourseDetail from "./components/pages/CourseDetail";
 import Quiz from "./components/pages/Quiz";
 import Signup from "./components/pages/Signup";
+import Login from "./components/pages/Login";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/logout" element={<Logout />}></Route>
             <Route path="/Quiz" element={<Quiz />}></Route>
             <Route path="/SignUp" element={<Signup />}></Route>
+            <Route path="/Login" element={<Login />}></Route>
             
           </Routes>
         </Sidebar>

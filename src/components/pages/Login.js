@@ -5,10 +5,10 @@ function Login() {
 
 
   return (
-    <div>Hello Welcome
+    <div>
         <form>
-            <input type="text" placeholder='Enter id'></input><br></br>
-            <input type="password" placeholder='Enter Password'></input><br></br>
+            <input type="text"  placeholder='Enter id'></input><br></br>
+            <input type="password"  placeholder='Enter Password'></input><br></br>
             <select>
                 <option>Teacher</option>
                 <option>Student</option>
@@ -18,7 +18,7 @@ function Login() {
         </form>
 
         <span>
-            Did Not Have Account ? <button >Sign Up</button>
+            Did Not Have Account ? <a href='Signup' >Sign Up</a>
         </span>
 
 

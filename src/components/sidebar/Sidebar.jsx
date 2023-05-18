@@ -3,7 +3,8 @@ import {AnimatePresence, motion} from 'framer-motion'
 import {FaHome, FaBars } from 'react-icons/fa'
 import {FaRegListAlt} from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
-import { BsGearFill,BsFillArrowLeftSquareFill } from "react-icons/bs";
+import { BsGearFill,BsFillArrowLeftSquareFill} from "react-icons/bs";
+
 import { useState } from 'react'
 import '../../App.css';
 const routes = [
@@ -32,8 +33,13 @@ const routes = [
         icon:<BsFillArrowLeftSquareFill/>
     },
     {
-        path:'Signup',
+        path:'/Signup',
         name:"signup",
+        icon:<BsFillArrowLeftSquareFill/>
+    },
+    {
+        path:'/Login',
+        name:"Login",
         icon:<BsFillArrowLeftSquareFill/>
     }
 ]
