@@ -54,6 +54,13 @@
   .answer-section button:last-child {
     margin-bottom: 0;
   }
+  .btnQuiz{
+    border : none;
+    border-radius: 2px;
+    margin-top: 8px;
+    font-size: medium;
+    font-weight: 600;
+  }
 
 
 
@@ -77,7 +84,7 @@
   background-color: #b9ceee;
   height:500px;
   margin:0 auto;
-  box-shadow:4px 4px 4px 4px rgb(172, 165, 165);
+  box-shadow:4px 4px 4px 4px rgb(199, 195, 195);
   border:none;
   border-radius: 5px 0px 0px 5px;  
   align-items: center;

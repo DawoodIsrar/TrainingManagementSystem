@@ -9,8 +9,6 @@ const Signup= () => {
   const [password, setPassword] = useState("123456");
   const [repassword, setRepassword] = useState("123456");
   
-
-
 const handleSubmit = async (e) => {
   e.preventDefault();
   // console.table({ email, fname, lname, password,repassword });

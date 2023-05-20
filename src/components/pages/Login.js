@@ -2,23 +2,13 @@ import React from 'react'
 
 function Login() {
 
-
-
   return (
     <>
-    <div>
-        
-        
-    </div>
-
-
     <div className='reg'>
     <div className='form'>
     <form className='regform'>
         <div className='fields'>
         <input className='inputform' type="text" placeholder='Enter id'></input><br></br>
-    
-    
     <input className='inputform' type="password" placeholder='Type Password' ></input><br></br>
       <div style={{margin:"0 30%" , display:"inline"}}> 
         <span style={{marginRight:"5%"}}>Role:</span>

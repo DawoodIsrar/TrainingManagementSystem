@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Style.css';
+import CourseCatalog from './CourseCatalog';
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
@@ -15,6 +16,21 @@ const Quiz = () => {
       question: 'Who invanted www?',
       options: ['Tim berner li', 'Pablo Picasso', 'Vincent van Gogh', 'Michelangelo'],
       answer: 'Tim berner li'
+    },
+    {
+      question: 'What is the most famous language?',
+      options: ['Javascript', 'Java', 'C++', 'C'],
+      answer: 'Javascript'
+    },
+    {
+      question: 'What is the most famous language?',
+      options: ['Javascript', 'Java', 'C++', 'C'],
+      answer: 'Javascript'
+    },
+    {
+      question: 'What is the most famous language?',
+      options: ['Javascript', 'Java', 'C++', 'C'],
+      answer: 'Javascript'
     },
     {
       question: 'What is the most famous language?',
@@ -41,7 +57,8 @@ const Quiz = () => {
       {showScore ? (
         <div className="score-section">
           You scored {score} out of {questions.length}<br></br>
-          {(score >= 3)? "Pass":"Fail"}
+          {(score >= 3)? "Pass":"Fail"}<br></br>
+          <button className='btnQuiz' type='submit' onClick={"CourseCatalog"}>Go to Next</button>
         </div>
       ) : (
         <>
