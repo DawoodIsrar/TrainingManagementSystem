@@ -37,6 +37,8 @@ const Quiz = () => {
   };
 
   return (
+    <>
+    <h1 className="jumbotron  text-center bg-primary square">Quiz</h1>
     <div className="quiz">
       {showScore ? (
         <div className="score-section">
@@ -61,6 +63,7 @@ const Quiz = () => {
         </>
       )}
     </div>
+    </>
   );
 };
 

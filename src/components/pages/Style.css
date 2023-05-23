@@ -1,10 +1,9 @@
 .quiz {
     max-width: 500px;
     margin: 0 auto;
-    margin-left: 500px;
     margin-top: 95px;
     padding: 40px;
-    background-color: rgb(0, 7, 61);
+    background: linear-gradient(to left, #007bff, #000);
     border-radius: 5px;
     box-shadow: 10px 10px 10px 10px rgba(11, 11, 11, 0.1);
     color: white;
@@ -102,7 +101,7 @@
   border-radius: 4px;
   border: none;
   color: white;
-  background-color: rgb(73, 73, 214);;
+  background-color: #039;
 
 }
 
@@ -113,7 +112,7 @@ padding-top: 70px;
 }
 .half{
   width: 50%;
-  background: rgb(73, 73, 214);
+  background: #039;
   border-radius: 0px 5px 5px 0px;  
   box-shadow:4px 4px 4px 4px rgb(172, 165, 165);
   display: flex;

@@ -14,6 +14,7 @@ import Signup from "./components/pages/Signup";
 import Login from "./components/pages/Login";
 import CourseCreate from "./CourseCreate";
 
+
 function App() {
   return (
     <>
@@ -37,5 +38,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

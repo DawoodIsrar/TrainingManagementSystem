@@ -18,9 +18,9 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   // console.table({ email, fname, lname, password,repassword });
 try{
-  const {data} = await axios.post(`http://localhost:8000/api/register` , 
+  await axios.post(`http://localhost:8000/api/register` , 
   {email,fname,lname,password,repassword});
-  // console.log("REGISTER RESPONCE", data);
+ 
   toast("Registration successful. please login");
 } catch(err){
        toast(err.response.data)
@@ -30,6 +30,8 @@ try{
 
 
   return (
+    <>
+    <h1 className="jumbotron  text-center bg-primary square">Register</h1>
     <div className='reg'>
         <div className='form'>
         <form className='regform' onSubmit={handleSubmit}>
@@ -55,6 +57,7 @@ try{
         </div>
         </div>
     </div>
+    </>
   )
 }
 

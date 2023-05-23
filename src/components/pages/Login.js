@@ -6,12 +6,7 @@ function Login() {
 
   return (
     <>
-    <div>
-        
-        
-    </div>
-
-
+      <h1 className="jumbotron  text-center bg-primary square">Login</h1>
     <div className='reg'>
     <div className='form'>
     <form className='regform'>
@@ -27,7 +22,7 @@ function Login() {
                 <option >Student</option>
             </select><br></br>
       </div>
-    
+        
         <button className='form-btn'>Sign In</button>
         <div style={{marginTop:"5%"}}>
             Did Not Have Account ? <a href='/Signup' >Sign Up</a>
