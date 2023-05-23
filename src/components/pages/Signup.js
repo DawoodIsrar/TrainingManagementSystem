@@ -1,5 +1,9 @@
+
 import axios from 'axios';
 import React, { useState } from 'react'
+import { toast } from 'react-toastify';
+
+
 
 
 const Signup= () => {
@@ -8,14 +12,19 @@ const Signup= () => {
   const [lname, setLName] = useState("Jan");
   const [password, setPassword] = useState("123456");
   const [repassword, setRepassword] = useState("123456");
-  
 
 
 const handleSubmit = async (e) => {
   e.preventDefault();
   // console.table({ email, fname, lname, password,repassword });
-  const {data} = await axios.post(`http://localhost:8000/api/register` , {email,fname,lname,password,repassword});
-  console.log("REGISTER RESPONCE", data);
+try{
+  const {data} = await axios.post(`http://localhost:8000/api/register` , 
+  {email,fname,lname,password,repassword});
+  // console.log("REGISTER RESPONCE", data);
+  toast("Registration successful. please login");
+} catch(err){
+       toast(err.response.data)
+}
 };
 
 
@@ -35,7 +44,9 @@ const handleSubmit = async (e) => {
             <button className='form-btn'>Create Account</button>
         
             </div>
+      
         </form>
+      
         </div>
         <div className='half'>
         <div className='half-card'>
