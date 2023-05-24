@@ -3,8 +3,9 @@ import {AnimatePresence, motion} from 'framer-motion'
 import {FaHome, FaBars } from 'react-icons/fa'
 import {FaRegListAlt} from 'react-icons/fa'
 import { NavLink } from 'react-router-dom'
-import { BsGearFill,BsFillArrowLeftSquareFill} from "react-icons/bs";
-
+import {BsPersonAdd, BsGearFill,BsFillFileEarmarkPlusFill} from "react-icons/bs";
+import {BiLogOutCircle, BiLogIn , BiBookAdd} from 'react-icons/bi'
+import {SiTestcafe} from 'react-icons/si'
 import { useState } from 'react'
 import '../../App.css';
 const routes = [
@@ -21,7 +22,7 @@ const routes = [
     {
         path:'/CourseCreate',
         name:"Create Course",
-        icon:<BsGearFill/>
+        icon:<BiBookAdd/>
     },
     {
         path:'/accountsetting',
@@ -30,23 +31,30 @@ const routes = [
     },{
         path:'/logout',
         name:"Logout",
-        icon:<BsFillArrowLeftSquareFill/>
+        icon:<BiLogOutCircle/>
     },
     {
         path:'/Quiz',
         name:"Quiz",
-        icon:<BsFillArrowLeftSquareFill/>
+        icon:<SiTestcafe/>
     },
     {
         path:'/Signup',
         name:"signup",
-        icon:<BsFillArrowLeftSquareFill/>
+        icon:<BsPersonAdd/>
     },
     {
         path:'/Login',
         name:"Login",
-        icon:<BsFillArrowLeftSquareFill/>
+        icon:<BiLogIn/>
     }
+    ,
+ {
+    path:'/AddQuestion',
+    name:"Add Question",
+    icon:<BsFillFileEarmarkPlusFill/>
+}
+
 ]
 function Sidebar({children}) {
     const [isOpen,setIsopen] = useState(false)

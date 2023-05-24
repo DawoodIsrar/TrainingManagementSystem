@@ -13,6 +13,7 @@ import Quiz from "./components/pages/Quiz";
 import Signup from "./components/pages/Signup";
 import Login from "./components/pages/Login";
 import CourseCreate from "./CourseCreate";
+import CreateQuestion from "./components/pages/CreateQuestion";
 
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
             <Route path="/Quiz" element={<Quiz />}></Route>
             <Route path="/SignUp" element={<Signup />}></Route>
             <Route path="/Login" element={<Login />}></Route>
-            
+            <Route path="/Addquestion" element={<CreateQuestion />}></Route>
           </Routes>
         </Sidebar>
       </Router>
