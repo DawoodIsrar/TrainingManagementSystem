@@ -1,8 +1,11 @@
-import express from "express";
-import { register } from "../controllers/auth";
+const express = require("express")
+const ragister =  require("../controllers/auth")
+const logIn = require('../controllers/loginAouth')
+
 
 const router = express.Router();
- router.post('/register' ,register);
+ router.post('/register' ,ragister);
+ router.post('/logIn' ,logIn);
 
  module.exports = router;
 

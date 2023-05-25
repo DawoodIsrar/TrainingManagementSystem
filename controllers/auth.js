@@ -1,8 +1,9 @@
-import User from "../models/user";
-import { hashPassword } from "../utils/auth";
+const User = require('../models/user');
+const bcrypt = require('bcrypt')
 
-export const register = async (req, res) => {
+ const register = async (req, res) => {
   try {
+    
     const { email, fname, lname, password, repassword } = req.body;
     // validation
     if (!fname) {
@@ -25,7 +26,7 @@ export const register = async (req, res) => {
     }
 
     // hash password
-    const hashedPassword = await hashPassword(password);
+    const hashedPassword =  bcrypt.hashSync(password,8);
 
     // register
     const newUser = await User.create({
@@ -43,3 +44,4 @@ export const register = async (req, res) => {
     return res.status(400).send("Error. Please try again");
   }
 };
+module.exports = register;
