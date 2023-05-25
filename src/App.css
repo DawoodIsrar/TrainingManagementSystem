@@ -7,9 +7,10 @@
   background-color: #000;
 }
 .sidebar{
+  
   background: linear-gradient(to left, #007bff, #000);
   color: rgb(236, 228, 228);
-  height: 100vh;
+  height:100vh;
 }
 .icon{
   color: rgb(235, 235, 245);

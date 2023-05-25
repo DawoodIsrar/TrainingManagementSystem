@@ -19,12 +19,15 @@ const CourseCreate= () => {
     console.log(values.paid)
     setPaid("true")
    
-    await axios.post(`http://localhost:8000/api/course` , 
+   const res= await axios.post(`http://localhost:8000/api/addCourse` , 
     {title,description ,paid,category,});
-   
-    toast("Registration successful for course. please login");
+    console.log(res.data.message)
+    toast(res.data.message);
   } catch(err){
-         toast(err.response.data)
+    if(err){
+      toast(err.response.message)
+    }
+        
   }
   };
 
