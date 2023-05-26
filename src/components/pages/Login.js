@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
 import { toast } from "react-toastify";
-import { Link, useHistory } from "react-router-dom";
-import { BrowserRouter as Router } from "react-router-dom";
+import {Button} from 'antd'
+import Signup from "./Signup";
+import { Link } from "react-router-dom"; 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -35,8 +35,44 @@ function Login() {
   };
 
   return (
-    <>
-      <h1 className="jumbotron  text-center bg-primary square">Login</h1>
+    
+  
+      <>
+       <div className=' main-div'>
+             <div className="login-form">
+     <form>
+     
+      <h4 className='login'>Login</h4>
+       <div className="input-container">
+         <label>Email </label>
+         <input type="text" name="email" required 
+                placeholder="Enter Email Address"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}/>
+        
+       </div>
+       <div className="input-container">
+         <label>Password </label>
+         <input type="password" name="pass" required 
+                placeholder="Enter Password"
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}/>
+        
+       </div>
+       <div className="button-container">
+         <Button type='Submit' className='sign' onClick={handleSubmit}>Sign In</Button>
+       </div>
+       <div className="button-signup">
+       <p>Did You Have Account ? <span><Link to={"/SignUp"}> Sign Up</Link></span></p>
+       
+        </div>
+      
+     </form>
+          </div>
+        </div>
+          {/* <h1 className="jumbotron  text-center bg-primary square">Login</h1>
       <div className="reg">
         <div className="form">
           <form className="regform" onSubmit={handleSubmit}>
@@ -76,8 +112,13 @@ function Login() {
             </div>
           </form>
         </div>
-      </div>
-    </>
+      </div> */}
+      </>
+       
+      
+  
+    
+    
   );
 }
 

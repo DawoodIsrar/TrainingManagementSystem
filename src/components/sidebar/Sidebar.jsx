@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FaHome, FaBars } from 'react-icons/fa'
 import { FaRegListAlt } from 'react-icons/fa'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 import { BsGearFill, BsFillArrowLeftSquareFill } from 'react-icons/bs'
 import { useState } from 'react'
@@ -35,9 +35,16 @@ const studentRoutes = [
     icon: <BsGearFill />,
   },
   {
-    path: '/logout',
+    path: '/login',
     name: 'Log Out',
-    icon: <BsGearFill />,
+    icon: (
+      <BsGearFill
+        onClick={() => {
+          alert('asd')
+          //   useNavigate('/login')
+        }}
+      />
+    ),
   },
 ]
 const teacherRoutes = [
@@ -72,9 +79,15 @@ const teacherRoutes = [
   //     icon:<BsFillArrowLeftSquareFill/>
   // },
   {
-    path: '/logout',
+    path: '/login',
     name: 'Log out',
-    icon: <BsFillArrowLeftSquareFill />,
+    icon: (
+      <BsFillArrowLeftSquareFill
+        onClick={() => {
+          //   useNavigate('/login')
+        }}
+      />
+    ),
   },
 ]
 
@@ -111,7 +124,21 @@ function Sidebar({ children }) {
                     key={rout.name}
                     className="navlink"
                   >
-                    <div className="icon">{rout.icon}</div>
+                    <div
+                      className="icon"
+                      onClick={() => {
+                        alert('sad')
+
+                        if (rout?.path == '/login') {
+                          alert('sad')
+                          window.sessionStorage.removeItem('id')
+                          window.sessionStorage.removeItem('token')
+                          window.sessionStorage.removeItem('role')
+                        }
+                      }}
+                    >
+                      {rout.icon}
+                    </div>
                     <AnimatePresence>
                       {isOpen ? (
                         <div className="routeName">{rout.name} </div>

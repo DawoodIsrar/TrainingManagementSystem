@@ -3,7 +3,7 @@ import image from '../../images/course.jpeg'
 import '../../App.css'
 import { color } from 'framer-motion'
 
-function Card(props) {
+function Card({ data }) {
   return (
     <>
       <div
@@ -12,19 +12,17 @@ function Card(props) {
       >
         <img src={image}></img>
         <h5>
-          {' '}
-          <span>Title :</span> Mern-Stack Bootcamp
+          <span>Title :</span> {data?.title}
         </h5>
         <h5>
-          {' '}
-          <span>Duration :</span> Mern-Stack Bootcamp{' '}
-          {props.enrol == 'true' ? (
+          <span>Description :</span> {data?.description}
+          {/* {props.enrol == 'true' ? (
             <span>
               <a href="#">Enrolled</a>
             </span>
           ) : (
             ''
-          )}
+          )} */}
         </h5>
       </div>
     </>

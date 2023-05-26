@@ -30,7 +30,14 @@ function App() {
   }, [role]);
 
   if (!token) {
-    return <Login />;
+    return <>
+    <Router>
+      <Routes>
+       <Route path="/" element={<Login/>}></Route>
+       <Route path='/SignUp' element={<Signup/>}></Route>
+      </Routes>
+    </Router>
+    </>;
   } else {
     if (role === "student") {
       console.log(role);
