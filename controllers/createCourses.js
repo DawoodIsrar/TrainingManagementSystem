@@ -20,9 +20,9 @@ const createCourse = async (req, res) => {
           .status(400)
           .json({ message: "Please fill the title field is require" });
       } else {
-        const find = Courses.find({ tittle: req.body.title });
-        console.log(find, "====");
-        if (find) {
+        const find = await Courses.find({ title: req.body.title });
+        console.log("====", find);
+        if (find?.length > 0) {
           return res.status(200).json({ message: "Course already exist" });
         } else {
           const course = await Courses.create({
