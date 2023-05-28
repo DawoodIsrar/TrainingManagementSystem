@@ -14,7 +14,7 @@ export const getUserEnrolledCourses = async (studentId) => {
 
   return response;
 };
-
+// viewQuestions
 export const enrolledCourses = async (studentId, courseId) => {
   await axios
     .post("http://localhost:8000/api/enrolledCourse", {
@@ -26,4 +26,19 @@ export const enrolledCourses = async (studentId, courseId) => {
       if (res?.status === 200) toast(res?.data?.message);
       return res;
     });
+};
+
+export const viewQuestions = async (quizId) => {
+  let response = [];
+  await axios
+    .post("http://localhost:8000/api/viewQuestions", {
+      quizId: quizId,
+    })
+    .then((res) => {
+      console.log("from api", res);
+      response = res?.data;
+      console.log("from response", response);
+      // if (res?.status === 200) toast(res?.data?.message);
+    });
+  return response;
 };

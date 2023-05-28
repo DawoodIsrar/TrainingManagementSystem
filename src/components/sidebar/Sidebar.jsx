@@ -14,6 +14,11 @@ const studentRoutes = [
     icon: <FaHome />,
   },
   {
+    path: '/profile',
+    name: 'Profile',
+    icon: <FaHome />,
+  },
+  {
     path: '/enroll',
     name: 'Enrolled Courses',
     icon: <FaRegListAlt />,
@@ -40,7 +45,6 @@ const studentRoutes = [
     icon: (
       <BsGearFill
         onClick={() => {
-          alert('asd')
           //   useNavigate('/login')
         }}
       />
@@ -51,6 +55,11 @@ const teacherRoutes = [
   {
     path: '/',
     name: 'Course Catalog',
+    icon: <FaHome />,
+  },
+  {
+    path: '/profile',
+    name: 'Profile',
     icon: <FaHome />,
   },
   // {
@@ -68,6 +77,11 @@ const teacherRoutes = [
     name: 'Account setting',
     icon: <BsGearFill />,
   },
+  // {
+  //   path: '/teacherquizes',
+  //   name: 'Quizes',
+  //   icon: <BsGearFill />,
+  // },
   {
     path: '/createQuiz',
     name: 'Quiz',
@@ -127,10 +141,7 @@ function Sidebar({ children }) {
                     <div
                       className="icon"
                       onClick={() => {
-                        alert('sad')
-
                         if (rout?.path == '/login') {
-                          alert('sad')
                           window.sessionStorage.removeItem('id')
                           window.sessionStorage.removeItem('token')
                           window.sessionStorage.removeItem('role')

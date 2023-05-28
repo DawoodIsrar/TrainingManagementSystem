@@ -4,7 +4,7 @@ import Card from '../card/Card'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import CourseDetail from './CourseDetail'
 import { getUserEnrolledCourses } from '../apis'
-function EnrolledCourses() {
+function EnrolledCourses({ setQuizId, setSelectedCouserId }) {
   const [enrolledCourses, setEnrolledCourses] = useState(null)
 
   const studentId = window.sessionStorage.getItem('id')
@@ -25,11 +25,16 @@ function EnrolledCourses() {
         {' '}
         <h2>Enrolled Courses</h2>
       </div>
-      <div className="enroll">
+      <div style={{ display: 'inline-flex' }}>
         {enrolledCourses?.map((data, index) => {
           return (
             <>
-              <Card key={index} data={data} />
+              <Card
+                setQuizId={setQuizId}
+                key={index}
+                setSelectedCouserId={setSelectedCouserId}
+                data={data}
+              />
             </>
           )
         })}

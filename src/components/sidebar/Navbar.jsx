@@ -1,6 +1,7 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import { toast } from 'react-toastify';
 const Navbar = () => {
     const handleSignOut = async (e) => {
         e.preventDefault();
@@ -12,7 +13,7 @@ const Navbar = () => {
           //   icon: 'success',
           //   title: 'Logout successfully'
           // })
-          alert("Log Out Successful")
+          toast("Log Out Successful")
           setTimeout(() => {
             window.location.assign('/');
           }, 1600);

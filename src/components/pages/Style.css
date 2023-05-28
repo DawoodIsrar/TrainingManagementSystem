@@ -250,3 +250,37 @@ input[type="submit"]:hover {
 .enroll{
   display: flex;
 }
+.profile-div{
+  display: flex;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.pic-div img{
+  width: 70%;
+  height: 70%;
+}
+
+
+/* ////course */
+
+.heading{
+  font-weight:600;
+}
+
+.quizes{
+  text-decoration: underline;
+  cursor:pointer;
+}
