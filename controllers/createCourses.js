@@ -11,11 +11,11 @@ const createCourse = async (req, res) => {
         return res
           .status(400)
           .json({ message: "Please fill the title field is require" });
-      } else if (req.body.paid == null) {
+      } else if (req.body.level == null) {
         return res
           .status(400)
           .json({ message: "Please fill the title field is require" });
-      } else if (req.body.category == null) {
+      } else if (req.body.duration == null) {
         return res
           .status(400)
           .json({ message: "Please fill the title field is require" });
@@ -28,8 +28,8 @@ const createCourse = async (req, res) => {
           const course = await Courses.create({
             title: req.body.title,
             description: req.body.description,
-            paid: req.body.paid,
-            category: req.body.category,
+            level: req.body.level,
+            duration: req.body.duration,
           });
           console.log("Course created:", course);
           return res

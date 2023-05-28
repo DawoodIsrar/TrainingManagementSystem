@@ -1,5 +1,6 @@
-const express = require('express');
-const quiz = require('../controllers/getAllQuizes');
+const express = require("express");
+const quizesByCourseId = require("../controllers/getQuiz");
 const router = express.Router();
-router.post('/allQuiz',quiz)
+router.post("/quizesByCourseId", quizesByCourseId);
+
 module.exports = router;

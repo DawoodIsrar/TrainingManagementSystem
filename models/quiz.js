@@ -1,16 +1,19 @@
-const mongoose = require('mongoose');
-const {Schema} = require('mongoose')
+const mongoose = require("mongoose");
+const { Schema } = require("mongoose");
 
+const quizSchema = new Schema(
+  {
+    courseId: {
+      type: Schema.Types.Mixed,
+      require: true,
+    },
+    quizName: {
+      type: Schema.Types.String,
+      require: true,
+      // unique: true,
+    },
+  },
+  { timestamps: true }
+);
 
-const quizSchema = new Schema({
-
-    courseId:{
-        type:Schema.Types.Mixed,
-        require:true
-    }
-     
-},
-{timestamps:true}
-)
-
-module.exports= mongoose.model('Quiz',quizSchema);
+module.exports = mongoose.model("Quiz", quizSchema);

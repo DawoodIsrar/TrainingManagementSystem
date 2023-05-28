@@ -1,27 +1,19 @@
-const quiz = require('../models/quiz');
+const Quiz = require('../models/quiz');
 const question = require('../models/question');
 const mongoose = require("mongoose");
 const getAllQuiz = async (req, res) => {
   try {
 
-    const exist = await quiz.find({courseId:req.body.courseId});
+    const exist = await Quiz.find({courseId:req.body.courseId});
     console.log(exist)
     if(exist.length>0){
-      const test = exist.map(
-        (data) =>{
-          console.log(data?.quizId) 
-          new mongoose.Types.ObjectId(data?.quizId)
-        }
-      );
+      const test = exist.map((data) => {
+        console.log(data?.quizId);
+        return new mongoose.Types.ObjectId(data?.quizId);
+      });
       const getQuestions = await question.aggregate([
         {
           $match: { _id: { $in: test } },
-          // $lookup: {
-          //   from: "Courses",
-          //   localField: "_id",
-          //   foreignField: "courseId",
-          //   as: "coursesDetails",
-          // },
         },
       ]);
       return res.status(200).json({
