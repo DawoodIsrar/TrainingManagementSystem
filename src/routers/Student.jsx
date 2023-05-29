@@ -10,6 +10,7 @@ import Login from '../components/pages/Login'
 import Signup from '../components/pages/Signup'
 import Profile from '../components/pages/Profile'
 import TeacherQuizes from '../components/pages/TeacherQuizes'
+import Report from '../components/pages/reports'
 function Student() {
   const [selectedCouserId, setSelectedCouserId] = useState(null)
   const [quizId, setQuizId] = useState(null)
@@ -25,6 +26,8 @@ function Student() {
               }
             ></Route>
             <Route path="/Profile" element={<Profile />}></Route>
+            <Route path="/" element={<Profile />}></Route>
+
             <Route
               path="/enroll"
               element={
@@ -37,6 +40,8 @@ function Student() {
               {' '}
             </Route>
             <Route path="/accountsetting" element={<AccountSetting />}></Route>
+            <Route path="/report" element={<Report />}></Route>
+
             <Route path="/*" element={<div>Not Found</div>}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route

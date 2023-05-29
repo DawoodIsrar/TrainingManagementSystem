@@ -23,33 +23,19 @@ const studentRoutes = [
     name: 'Enrolled Courses',
     icon: <FaRegListAlt />,
   },
-  // {
-  //     path:'/CourseCreate',
-  //     name:"Create Course",
-  //     icon:<BsGearFill/>
-  // },
-
   {
-    path: '/Quiz',
-    name: 'Quiz',
-    icon: <BsFillArrowLeftSquareFill />,
+      path:'/report',
+      name:"See Reports",
+      icon:<BsGearFill/>
   },
+
+   
   {
     path: '/accountsetting',
     name: 'Account setting',
     icon: <BsGearFill />,
   },
-  {
-    path: '/login',
-    name: 'Log Out',
-    icon: (
-      <BsGearFill
-        onClick={() => {
-          //   useNavigate('/login')
-        }}
-      />
-    ),
-  },
+ 
 ]
 const teacherRoutes = [
   {
@@ -72,11 +58,11 @@ const teacherRoutes = [
     name: 'Create Course',
     icon: <BsGearFill />,
   },
-  {
-    path: '/accountsetting',
-    name: 'Account setting',
-    icon: <BsGearFill />,
-  },
+  // {
+  //   path: '/accountsetting',
+  //   name: 'Account setting',
+  //   icon: <BsGearFill />,
+  // },
   // {
   //   path: '/teacherquizes',
   //   name: 'Quizes',
@@ -92,17 +78,17 @@ const teacherRoutes = [
   //     name:"signup",
   //     icon:<BsFillArrowLeftSquareFill/>
   // },
-  {
-    path: '/login',
-    name: 'Log out',
-    icon: (
-      <BsFillArrowLeftSquareFill
-        onClick={() => {
-          //   useNavigate('/login')
-        }}
-      />
-    ),
-  },
+  // {
+  //   path: '/login',
+  //   name: 'Log out',
+  //   icon: (
+  //     <BsFillArrowLeftSquareFill
+  //       onClick={() => {
+  //         //   useNavigate('/login')
+  //       }}
+  //     />
+  //   ),
+  // },
 ]
 
 function Sidebar({ children }) {

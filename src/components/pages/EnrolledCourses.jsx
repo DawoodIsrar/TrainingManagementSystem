@@ -25,7 +25,7 @@ function EnrolledCourses({ setQuizId, setSelectedCouserId }) {
         {' '}
         <h2>Enrolled Courses</h2>
       </div>
-      <div style={{ display: 'inline-flex' }}>
+      <div style={{ display: "flex",justifyContent:"center" }}>
         {enrolledCourses?.map((data, index) => {
           return (
             <>
