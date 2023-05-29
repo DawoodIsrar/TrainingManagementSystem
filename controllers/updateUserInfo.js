@@ -1,24 +1,33 @@
-const User = require('../models/user');
+const User = require("../models/user");
+const mongoose = require("mongoose");
 
-const updateUserInfo = async (req, res) => {
-  const { id, fname, lname, email } = req.body;
+const updateInfo = async (req, res) => {
+  const { fname, lname, email, password } = req.body;
 
-  try {
-    const user = await User.findById(id);
-    if (!user) {
-      return res.status(404).json({ message: 'User not found' });
-    }
+  const userExist = await User.findById(req.body.id);
+  console.log(fname, lname, email, password);
+  console.log(userExist);
 
-    user.fname = fname;
-    user.lname = lname;
-    user.email = email;
+  if (userExist !== null) {
+    const updateUser = await User.findByIdAndUpdate(
+      req.body.id,
+      {
+        email: email,
+        fname: fname,
+        lname: lname,
+        password: password,
+        repassword: password,
+      },
+      { new: true }
+    );
 
-    const updatedUser = await user.save();
-    res.status(200).json(updatedUser);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Internal server error' });
+    return res.status(200).json({
+      data: updateUser,
+      message: "User info updated successfully.",
+    });
+  } else {
+    return res.status(200).json({ message: "User does not exist." });
   }
 };
 
-module.exports = updateUserInfo;
+module.exports = updateInfo;
