@@ -1,45 +1,38 @@
 import React from 'react';
 import { Nav } from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { FiLogOut } from 'react-icons/fi';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Navbar = () => {
-    const handleSignOut = async (e) => {
-        e.preventDefault();
-        try {
-          window.sessionStorage.removeItem("access-token");
-          window.sessionStorage.removeItem("id");
-    
-          // Toast.fire({
-          //   icon: 'success',
-          //   title: 'Logout successfully'
-          // })
-          toast("Log Out Successful")
-          setTimeout(() => {
-            window.location.assign('/');
-          }, 1600);
-        } catch (error) {
-          console.error(error);
-        }
-      };
+  const handleSignOut = async (e) => {
+    e.preventDefault();
+    try {
+      window.sessionStorage.removeItem('access-token');
+      window.sessionStorage.removeItem('id');
 
-    return (
+      toast('Log Out Successful');
+      setTimeout(() => {
+        window.location.assign('/');
+      }, 1600);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
-        <div>
-    <Nav className='above-nav' variant="pills" defaultActiveKey="/home">
-      <Nav.Item>
-        {/* <Nav.Link className='logout-btn'  onClick={()=>{<Link to="/Login"></Link>
-        }}>Logout</Nav.Link> */}
-        <Link
-                        to="/login"
-                        onClick={handleSignOut}
-                      >
-                        Sign out
-                      </Link>
-      </Nav.Item>
-    </Nav>
-
-        </div>
-    );
-}
+  return (
+    <div className="navbar-container">
+      <Nav className="above-nav" variant="pills" defaultActiveKey="/home">
+        <Nav.Item className="ml-auto">
+          <Link to="/login" onClick={handleSignOut} className="signout-link">
+            <FiLogOut className="signout-icon" size={24} />
+            Sign out
+          </Link>
+        </Nav.Item>
+      </Nav>
+    </div>
+  );
+};
 
 export default Navbar;
